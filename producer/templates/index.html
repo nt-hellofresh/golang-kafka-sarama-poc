@@ -1,0 +1,16 @@
+<html>
+    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+    <head>
+        <title>Kafka Publisher</title>
+    </head>
+    <body>
+        <h1>Kafka Example POC</h1>
+        <button hx-post="/foo" hx-target="#response-div" hx-swap="innerHTML">
+            Publish foo
+        </button>
+        <button hx-post="/bar" hx-target="#response-div" hx-swap="innerHTML">
+            Publish bar
+        </button>
+        <div id="response-div"></div>
+    </body>
+</html>

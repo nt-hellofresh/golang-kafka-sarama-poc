@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+option go_package = "/pkg/pb";
+
+message Message {
+  string ID = 1;
+  string MessageType = 2;
+  bytes Body = 3;
+  google.protobuf.Timestamp At = 4;
+}
