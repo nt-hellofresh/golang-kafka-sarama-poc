@@ -45,7 +45,7 @@ func (p *KafkaPublisher) Publish(msg pkg.Message) error {
 	_, _, err := p.conn.SendMessage(&sarama.ProducerMessage{
 		Topic: p.topic,
 		Key:   sarama.ByteEncoder(msg.ID),
-		Value: sarama.StringEncoder(buf.String()),
+		Value: sarama.ByteEncoder(buf.Bytes()),
 	})
 	return err
 }
